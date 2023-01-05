@@ -6,10 +6,14 @@ import java.util.*;
 
 
      public static int[] solution(String[] idList, String[] reportArr, int k){
+
+         //answer배열
+         // idList 만큼 만들어 줌.
         int[] answer = new int[idList.length];
+
          //1. Report 중복제거
          //한 사람이 다른 한 사람을 여러 번 신고할 수 없음.
-         //객체만 저장하면되고, 중복제거를 위해 HashSet을 사용.
+         //중복제거를 위해 HashSet을 사용.
          HashSet<String> report = new HashSet<>(Arrays.asList(reportArr));
          System.out.println("1. Report 중복제거 : " + report);
 
