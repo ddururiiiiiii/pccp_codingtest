@@ -7,8 +7,8 @@ import java.util.*;
 
      public static int[] solution(String[] idList, String[] reportArr, int k){
 
-         //answer배열
-         // idList 만큼 만들어 줌.
+         //0.answer 배열 생성
+         //idList 만큼 만들어 줌.
         int[] answer = new int[idList.length];
 
          //1. Report 중복제거
