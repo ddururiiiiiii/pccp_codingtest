@@ -7,7 +7,6 @@ import java.util.Map;
 
 class hashing01_2 {
 
-
     public static int[] solution(String[] id_list, String[] reportArr, int k) {
 
         //answer 배열 만들기
