@@ -7,17 +7,22 @@ import java.util.Map;
 public class level0_11 {
     //최빈값 구하기
     public static int solution(int[] array) {
+
+        int maxCount = 0;
         int answer = 0;
 
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-
-        for(int i = 0; i < array.length; i++){
-           map.put(array[i], 0);
-        }
-        System.out.println("map = " + map);
-
-        for (int i = 0; i < array.length; i++){
-
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int number : array){
+            int count = map.getOrDefault(number, 0) + 1;
+            System.out.println("count = " + count);
+            if(count > maxCount){
+                maxCount = count;
+                answer = number;
+            }
+            else  if(count == maxCount){
+                answer = -1;
+            }
+            map.put(number, count);
         }
         return answer;
     }
